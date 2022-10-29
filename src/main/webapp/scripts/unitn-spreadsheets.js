@@ -6,10 +6,13 @@ import SpreadsheetsService from "./spreadsheets-service.js";
  *
  * The class is self-contained, and it can be integrated in any HTML page just by importing it in a module script
  * and instantiating it.
- *
- * @param parentHTMLElement html element that will become the parent of unitn-spreadsheets
  */
 export default class UnitnSpreadsheets {
+
+    /**
+     * Class constructor
+     * @param parentHTMLElement element that will become the parent of the unitn-spreadsheets
+     */
     constructor(parentHTMLElement) {
         // Update interval in milliseconds: every UPDATE_INTERVAL milliseconds the UI will be updated with the most recent changes
         this.UPDATE_INTERVAL = 1000;
