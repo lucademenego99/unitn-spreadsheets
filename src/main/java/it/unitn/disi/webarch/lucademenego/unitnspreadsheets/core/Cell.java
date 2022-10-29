@@ -24,9 +24,19 @@ public class Cell {
     }
 
     public String getFormula() {return formula;}
-
     public String getId() {return id;}
     public int getValue() {return value;}
+
+    public String toJson() {
+        StringBuilder json = new StringBuilder("");
+        json.append("{\n")
+            .append("\"value\": ")
+            .append(this.getValue()).append(",\n")
+            .append("\"id\": \"").append(this.getId()).append("\",\n")
+            .append("\"formula\": \"").append(this.getFormula()).append("\"\n")
+            .append("}\n");
+        return json.toString();
+    }
 
     public String toString() {
         StringBuffer sb = new StringBuffer();

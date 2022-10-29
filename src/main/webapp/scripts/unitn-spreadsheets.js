@@ -162,6 +162,7 @@ export default class UnitnSpreadsheets {
 
         // On focus out, update the cells based on this.currentCell
         formulaElement.addEventListener("focusout", async (event) => {
+            document.getElementById("input-cell-name").innerText = "xx";
             await this.updateCells(event);
         });
 
