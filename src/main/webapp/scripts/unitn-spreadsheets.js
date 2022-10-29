@@ -90,7 +90,7 @@ export default class UnitnSpreadsheets {
 
         for (let i = 0; i < this.columns.length; i++) {
             const td = document.createElement("td");
-            td.classList.add(..."headertd".split(" "));
+            td.classList.add("headertd");
             td.innerText = this.columns[i];
             header.appendChild(td);
         }
@@ -107,7 +107,7 @@ export default class UnitnSpreadsheets {
 
             // Generate ID TD
             const td = document.createElement("td");
-            td.classList.add(..."idtd".split(" "));
+            td.classList.add("idtd");
             td.innerText = i+1;
             tr.appendChild(td);
 
@@ -122,7 +122,7 @@ export default class UnitnSpreadsheets {
 
                 const input = document.createElement("input");
                 input.type = "text";
-                input.classList.add(..."table-input".split(" "));
+                input.classList.add("table-input");
                 td.appendChild(input);
 
                 this.setEventListeners(td);
