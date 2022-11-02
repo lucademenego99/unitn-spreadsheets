@@ -113,7 +113,7 @@ export default class UnitnSpreadsheets {
             // Generate ID TD
             const td = document.createElement("td");
             td.classList.add("idtd");
-            td.innerText = i+1;
+            td.innerText = "i+1";
             tr.appendChild(td);
 
             // Generate main TDs
