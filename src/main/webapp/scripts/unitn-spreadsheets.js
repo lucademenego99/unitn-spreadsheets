@@ -44,7 +44,7 @@ export default class UnitnSpreadsheets {
                 SpreadsheetsService.getSpreadsheetsState(this.timestamp).then(result => {
                     if (this.timestamp !== result.timestamp) {
                         this.timestamp = result.timestamp;
-                        this.updateUI(result.cells);
+                        this.updateUI(result.cells, false);
                     }
                 });
             }, this.UPDATE_INTERVAL);
@@ -57,12 +57,17 @@ export default class UnitnSpreadsheets {
     /**
      * Given a list of cells, update the UI based on their value
      * @param cells list of cells to update
+     * @param updateCurrentCell whether the currently selected cell should be updated or not
+     *                          this is especially useful to prevent selected cells to be automatically updated
      */
-    updateUI(cells) {
+    updateUI(cells, updateCurrentCell = true) {
         for (let cell of cells) {
             const el = document.getElementById(cell.id);
             el.setAttribute("formula", cell.formula);
-            el.firstChild.value = cell.value;
+            // Update the value only if the user is not modifying the cell
+            if (this.currentCell == null || cell.id !== this.currentCell.id || (cell.id === this.currentCell.id && updateCurrentCell)) {
+                el.firstChild.value = cell.value;
+            }
         }
     }
 

@@ -60,7 +60,7 @@ public class SSEngine {
         theCell.setFormula(formula);
         if (! theCell.checkCircularDependencies(id)) {
             //restore cell
-            theCell.formula=clone.formula;
+            theCell.setFormula(clone.formula);
             theCell.id=clone.id;
             theCell.value=clone.value;
             return null;

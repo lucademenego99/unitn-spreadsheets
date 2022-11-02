@@ -73,6 +73,8 @@ public class Cell {
 
     private void parseFormula() {
         if (!formula.startsWith("=")) {
+            operands.clear();
+            operators.clear();
             try {
                 value = Integer.parseInt(formula);
             } catch (NumberFormatException ex) {
