@@ -5,7 +5,7 @@
 export default class SpreadsheetsService {
     /**
      * Get the current global state of the spreadsheet
-     * @returns {Promise<any>} Promise to teh spreadsheet's state
+     * @returns {Promise<string>} Promise to teh spreadsheet's state
      */
     static getSpreadsheetsState(timestamp) {
         const request = "spreadsheets-state" + (timestamp !== 0 ? ("?timestamp=" + timestamp) : "")
@@ -14,7 +14,7 @@ export default class SpreadsheetsService {
 
     /**
      * Get information about the spreadsheets options by calling the API
-     * @returns {Promise<any>} a promise to an object containing rows and columns information
+     * @returns {Promise<string>} a promise to an object containing rows and columns information
      */
     static getSpreadsheetsOptions() {
         return fetch('spreadsheets-options')
@@ -23,7 +23,7 @@ export default class SpreadsheetsService {
 
     /**
      * Evaluate the current cell by calling the API
-     * @returns {Promise<any>} Promise to information about updated cells
+     * @returns {Promise<string>} Promise to information about updated cells
      */
     static evaluateCell(currentCell) {
         // Prepare the parameters to send to the API

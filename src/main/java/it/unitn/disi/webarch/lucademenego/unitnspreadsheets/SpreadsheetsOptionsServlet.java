@@ -1,6 +1,5 @@
 package it.unitn.disi.webarch.lucademenego.unitnspreadsheets;
 
-import it.unitn.disi.webarch.lucademenego.unitnspreadsheets.core.Cell;
 import it.unitn.disi.webarch.lucademenego.unitnspreadsheets.core.SSEngine;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
@@ -8,6 +7,9 @@ import jakarta.servlet.annotation.*;
 
 import java.io.IOException;
 
+/**
+ * Get information about the state of the spreadsheet, i.e. rows and columns
+ */
 @WebServlet(name = "SpreadsheetsOptionsServlet", value = "/spreadsheets-options")
 public class SpreadsheetsOptionsServlet extends HttpServlet {
     @Override

@@ -4,6 +4,7 @@
 <head>
     <title>Unitn-Spreadsheets</title>
 
+    <!-- Include the main css file -->
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>

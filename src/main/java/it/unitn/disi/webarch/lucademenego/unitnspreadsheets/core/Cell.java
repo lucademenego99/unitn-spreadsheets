@@ -30,8 +30,7 @@ public class Cell {
     public String toJson() {
         StringBuilder json = new StringBuilder("");
         json.append("{\n")
-            .append("\"value\": ")
-            .append(this.getValue()).append(",\n")
+            .append("\"value\": ").append(this.getValue()).append(",\n")
             .append("\"id\": \"").append(this.getId()).append("\",\n")
             .append("\"formula\": \"").append(this.getFormula()).append("\"\n")
             .append("}\n");

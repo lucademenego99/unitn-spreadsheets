@@ -2,6 +2,7 @@
     box-sizing: border-box;
 }
 
+/* Main container of the spreadsheet */
 #spreadsheets-container {
     display: flex;
     padding: 3rem;
@@ -16,6 +17,7 @@
     overflow: auto;
 }
 
+/* Remove default styles from the input elements */
 input {
     font-family: FuzzyBubbles, serif;
     outline: none;
@@ -25,6 +27,7 @@ input {
     padding: 0;
 }
 
+/* Card containing the spreadsheet */
 .main-card {
     display: flex;
     flex-direction: row;
@@ -47,6 +50,7 @@ input {
     border-bottom-right-radius: 0.5rem;
 }
 
+/* Element showing the currently selected cell */
 #pre-input {
     display: flex;
     background-color: #E5E7EB;
@@ -59,6 +63,7 @@ input {
     width: 40px;
 }
 
+/* Input formula */
 #formula {
     background-color: transparent;
     color: #4B5563;
@@ -79,16 +84,18 @@ input {
     line-height: 2rem;
 }
 
+/* Class to simulate the effect of a hand-drawn border */
 .drawn-border {
     transition:all .25s ease;
     box-shadow: 20px 38px 34px -26px hsla(0,0%,0%,.2);
     border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
     border:solid 2px #41403E;
 }
-
 .drawn-border:hover {
     box-shadow:2px 8px 4px -6px hsla(0,0%,0%,.3);
 }
+
+/* Spreadsheet Table */
 
 #main-table {
     text-align: center;

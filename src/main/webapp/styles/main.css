@@ -1,3 +1,4 @@
+/* Import the font - only two possibilities: normal and bold */
 @font-face {
     font-family:"FuzzyBubbles";
     src: url("../assets/FuzzyBubbles-Regular.ttf") format("truetype");
@@ -9,6 +10,7 @@
     font-weight: bold;
 }
 
+/* Default styles - set font, no padding, no margin */
 body,html {
     margin: 0;
     padding: 0;
@@ -20,10 +22,14 @@ body,html {
     box-sizing: border-box;
 }
 
+/* Size of the background image */
+
 .background-image {
     width: 100vw;
     height: 100vh;
 }
+
+/* Application container */
 
 #app-container {
     position: absolute;
@@ -45,6 +51,8 @@ body,html {
     color: #4b5563;
     font-weight: bold;
 }
+
+/* Footer */
 
 .bottom-container {
     position: absolute;
